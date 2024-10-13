@@ -101,7 +101,7 @@ async def generate_podcast(request: PodcastRequest):
             combined_audio += segment
 
     # Save final combined audio file
-    final_audio_path = "/final_output.wav"
+    final_audio_path = "/out/final_output.wav"
     combined_audio.export(final_audio_path, format="wav")
 
     # Return the URL for the final audio file
